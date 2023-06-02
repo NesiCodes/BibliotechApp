@@ -107,7 +107,7 @@ public class AddBooksFragment extends Fragment {
                String bookLocation=booksLocationEditText.getText().toString();
                String bookAuthor=bookAuthorEditTxt.getText().toString();
                 if (bookName.isEmpty() || booksCount.isEmpty() || bookLocation.isEmpty() || bookAuthor.isEmpty()) {
-                    Toast.makeText(getContext(), "Ju lutem plotësoni të dhënat", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 } else if (imageUri == null) {
                     Toast.makeText(getContext(), "Ju lutem zgjidhni një foto", Toast.LENGTH_SHORT).show();
                 } else {
