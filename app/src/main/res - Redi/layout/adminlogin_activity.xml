@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3">
+
+
+    <ImageView
+        android:id="@+id/logoOnTopAdmin"
+        android:layout_width="119dp"
+        android:layout_height="124dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/phoneNumberForLoginAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Numri"
+        android:inputType="text"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/common_google_signin_btn_text_light_disabled"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoOnTopAdmin" />
+
+    <EditText
+        android:id="@+id/passwordForLoginAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Fjalëkalimi"
+        android:inputType="textPassword"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/common_google_signin_btn_text_light_disabled"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNumberForLoginAdmin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumberForLoginAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberForLoginAdmin" />
+
+    <Button
+        android:id="@+id/logInButtonAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Hyr"
+        app:layout_constraintEnd_toEndOf="@+id/passwordForLoginAdmin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordForLoginAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/passwordForLoginAdmin" />
+
+    <CheckBox
+        android:id="@+id/rememberMeCheckboxAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Remember Me"
+        android:textColor="#343434	"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordForLoginAdmin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordForLoginAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/passwordForLoginAdmin" />
+
+    <TextView
+        android:id="@+id/logohuMeRrjetetSocialeTekstAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Ose Hyr Me Rrjetet Sociale"
+        android:textColor="#343434	"
+        app:layout_constraintEnd_toEndOf="@+id/logInButtonAdmin"
+        app:layout_constraintStart_toStartOf="@+id/logInButtonAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/logInButtonAdmin" />
+
+    <TextView
+        android:id="@+id/numriTekstAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Numri i Telefonit"
+        android:textColor="#097969"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoOnTopAdmin" />
+
+    <TextView
+        android:id="@+id/passwordTextAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Fjalëkalimi"
+        android:textColor="#097969"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNumberForLoginAdmin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumberForLoginAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberForLoginAdmin" />
+
+    <Button
+        android:id="@+id/googleSignInAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="10dp"
+        android:drawableLeft="@drawable/google_icon"
+        android:paddingLeft="7dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/FacebookSignInAdmin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logohuMeRrjetetSocialeTekstAdmin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/FacebookSignInAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="150dp"
+        android:drawableLeft="@drawable/ic_facebook"
+        android:paddingLeft="7dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="@+id/googleSignInAdmin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/googleSignInAdmin"
+        app:layout_constraintTop_toTopOf="@+id/googleSignInAdmin" />
+
+    <TextView
+        android:id="@+id/userLoginRedirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Hyr si Përdorues"
+        android:textColor="#343434	"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/googleSignInAdmin" />
+
+    <TextView
+        android:id="@+id/logohuSiAdminTekst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="Admin Login"
+        android:textColor="#097969"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoOnTopAdmin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
