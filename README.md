@@ -17,7 +17,7 @@ navigating to app>java>com.dataflair.librarymanagementapp>Start class, right cli
 ![image](https://user-images.githubusercontent.com/89842810/205722737-8e088e99-755c-4e26-bb81-0b408aacd866.png)
 <br />
 Administrator Login: email:unejsi.isufaj@gmail.com  pass:bibliotechadmlogin <br>
-User Login: email:sherifiygi@gmail.com  pass:12345678
+User Login: email:hhyperspace6@gmail.com  pass:12345678
 
 **If a problem occurrs while running the app make sure that u have installed the following:**
 <br />
