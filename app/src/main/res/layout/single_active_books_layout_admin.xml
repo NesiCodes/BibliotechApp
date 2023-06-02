@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/BookImage"
+                android:layout_width="188dp"
+                android:layout_height="313dp"
+                android:src="@drawable/image_placeholder_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/BookNameTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Emri i librit"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/GivenDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Data e leshimit"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                android:singleLine="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/UserEmail" />
+
+            <TextView
+                android:id="@+id/UserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_marginTop="8dp"
+                android:text="Emri i perdoruesit"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/BookNameTxt" />
+
+            <TextView
+                android:id="@+id/UserEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_marginTop="8dp"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/UserPhone" />
+
+            <TextView
+                android:id="@+id/UserPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_marginTop="8dp"
+                android:text="Numri"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/UserName" />
+
+            <TextView
+                android:id="@+id/ReturnDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_marginTop="4dp"
+                android:text="Data e rikthimit"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.055"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/GivenDate" />
+
+            <Button
+                android:id="@+id/CollectBookBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Dergo Njoftim"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.113"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/ReturnDate" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
