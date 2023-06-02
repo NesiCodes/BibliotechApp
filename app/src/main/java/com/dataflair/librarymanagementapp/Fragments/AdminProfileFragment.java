@@ -332,7 +332,7 @@ public class AdminProfileFragment extends Fragment {
                         Picasso.get().load(uri).into(imageView);
                     }
                 });
-                Toast.makeText(getContext(),"Fotoja u shtua me sukses", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Image added successfully", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

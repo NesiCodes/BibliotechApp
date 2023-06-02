@@ -102,7 +102,7 @@ public class RegisterUserFromAdmin extends AppCompatActivity {
                                         user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {
-                                                Toast.makeText(RegisterUserFromAdmin.this,"Email per verifikim u dergua me sukses", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(RegisterUserFromAdmin.this,"Email for verification sent successfully", Toast.LENGTH_SHORT).show();
                                             }
                                         }).addOnFailureListener(new OnFailureListener() {
                                             @Override
@@ -111,7 +111,7 @@ public class RegisterUserFromAdmin extends AppCompatActivity {
 
                                             }
                                         });
-                                        Toast.makeText(RegisterUserFromAdmin.this,"Perdoruesi u regjistrua me sukses", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterUserFromAdmin.this,"User registered successfully", Toast.LENGTH_SHORT).show();
                                         fAuth.signInWithEmailAndPassword("admin@bibliotech.al","bibliotechadmlogin").addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                             @Override
                                             public void onComplete(@NonNull Task<AuthResult> task) {

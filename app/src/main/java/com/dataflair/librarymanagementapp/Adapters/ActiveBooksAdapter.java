@@ -40,12 +40,12 @@ public class ActiveBooksAdapter extends FirebaseRecyclerAdapter<Model, ActiveBoo
     @SuppressLint("SetTextI18n")
     @Override
     protected void onBindViewHolder(@NonNull ActiveBooksAdapter.Viewholder holder, int position, @NonNull Model model) {
-        holder.bookName.setText("Emri i librit: " + model.getBookName());
-        holder.userName.setText("Emri i perdoruesit: " + model.getName());
-        holder.userPhone.setText("Numri: " + model.getPhoneNumber());
+        holder.bookName.setText("Book name: " + model.getBookName());
+        holder.userName.setText("User name: " + model.getName());
+        holder.userPhone.setText("PhoneNo: " + model.getPhoneNumber());
         holder.userEmail.setText("Email: " + model.getMail());
-        holder.givenDate.setText("Data e dhenies: " + model.getGivenDate());
-        holder.returnDate.setText("Data e rikthimit: " + model.getReturnDate());
+        holder.givenDate.setText("Borrowed date: " + model.getGivenDate());
+        holder.returnDate.setText("Return date: " + model.getReturnDate());
 
         Picasso.get().load(model.getImageUrl()).into(holder.imageView);
 
@@ -62,7 +62,7 @@ public class ActiveBooksAdapter extends FirebaseRecyclerAdapter<Model, ActiveBoo
                 char c2 = currentDate.charAt(1);
                 String currentDateDay = new StringBuilder().append(c1).append(c2).toString();
                 int daysLeft = Integer.parseInt(returnDateDay) - Integer.parseInt(currentDateDay);
-                messageForSms = "Përshëndetje " + model.getName() + ", ju njoftojme se keni edhe " + daysLeft + " ditë kohë për të rikthyer librin " + model.getBookName();
+                messageForSms = "Hello " + model.getName() + ", we would like to inform you that you have " + daysLeft + " days left to return the book " + model.getBookName();
                 if(ContextCompat.checkSelfPermission(v.getContext(), Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
                     sendMessage();
                 }else{
@@ -76,7 +76,7 @@ public class ActiveBooksAdapter extends FirebaseRecyclerAdapter<Model, ActiveBoo
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(v.getContext(), "Njoftimi u dërgua",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(v.getContext(), "Notification sent successfully",Toast.LENGTH_SHORT).show();
                             }
                         });
             }

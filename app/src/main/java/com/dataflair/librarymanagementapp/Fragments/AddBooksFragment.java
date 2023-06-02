@@ -109,7 +109,7 @@ public class AddBooksFragment extends Fragment {
                 if (bookName.isEmpty() || booksCount.isEmpty() || bookLocation.isEmpty() || bookAuthor.isEmpty()) {
                     Toast.makeText(getContext(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 } else if (imageUri == null) {
-                    Toast.makeText(getContext(), "Ju lutem zgjidhni një foto", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Please select a photo", Toast.LENGTH_SHORT).show();
                 } else {
                     FirebaseDatabase.getInstance().getReference().child("AllBooks")
                             .addListenerForSingleValueEvent(new ValueEventListener() {
@@ -124,11 +124,11 @@ public class AddBooksFragment extends Fragment {
                 }
                 if(!bookAlreadyExists){
                 uploadData(imageUri,bookName,booksCount,bookLocation,bookAuthor);
-                Toast.makeText(getContext(),"Duke ruajtur të dhënat...",
+                Toast.makeText(getContext(),"Saving data...",
                         Toast.LENGTH_SHORT).show();
                 }else{
-                Toast.makeText(getContext(), "Ju nuk mund të vendosni" +
-                        " të njëjtin libër 2 herë",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "You can not insert" +
+                        " the same book twice",Toast.LENGTH_SHORT).show();
                 }
                 }
                                 @Override
@@ -243,7 +243,7 @@ public class AddBooksFragment extends Fragment {
                                     Intent intent = new Intent(getContext(), AdminActivity.class);
                                     getActivity().startActivity(intent);
                                     getActivity().finish();
-                                    Toast.makeText(getContext(),"Te dhenat u ruajten me sukses", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(),"Information saved successfully", Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }

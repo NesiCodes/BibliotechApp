@@ -76,17 +76,17 @@ public class LoginActivity extends AppCompatActivity {
                 EditText resetMail = new EditText(v.getContext());
                 AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
                 passwordResetDialog.setTitle("Reset Password ?");
-                passwordResetDialog.setMessage("Vendosni email tuaj per te mare linkun e ndryshimit te password");
+                passwordResetDialog.setMessage("Please insert your email to get the link to reset the password");
                 passwordResetDialog.setView(resetMail);
 
-                passwordResetDialog.setPositiveButton("Dergo", new DialogInterface.OnClickListener() {
+                passwordResetDialog.setPositiveButton("Send", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String mail = resetMail.getText().toString();
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(LoginActivity.this,"Linku u dergua me sukses", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this,"Link sent successfully", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
-                passwordResetDialog.setNegativeButton("Anullo", new DialogInterface.OnClickListener() {
+                passwordResetDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -113,16 +113,16 @@ public class LoginActivity extends AppCompatActivity {
                 String password = mPassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email)){
-                    mPhoneNumber.setError("Jepni Email");
+                    mPhoneNumber.setError("Insert Email");
                     return;
                 }
                 if(TextUtils.isEmpty(password)){
-                    mPassword.setError("Jepni Password");
+                    mPassword.setError("Insert Password");
                     return;
                 }
 
                 if(password.length() < 6){
-                    mPassword.setError("Passwordi duhet te jete me shume se 5 karaktere");
+                    mPassword.setError("Password must be longer than 6 characters");
                     return;
                 }
                 //authenticate the user
@@ -176,7 +176,7 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                 });
                             }else{
-                                Toast.makeText(LoginActivity.this,"Ju lutem verifikoni emailin tuaj",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this,"Please verify your email address",Toast.LENGTH_SHORT).show();
                             }
                             }else{
                             Toast.makeText(LoginActivity.this,"Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

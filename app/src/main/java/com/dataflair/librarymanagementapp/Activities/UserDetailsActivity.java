@@ -58,7 +58,7 @@ public class UserDetailsActivity extends AppCompatActivity {
 
 
                 if (address.isEmpty() || city.isEmpty() || pinCode.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Ju lutem, Plotësoni të gjitha fushat", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 } else {
                     addUserDetails(address, city, pinCode);
 
@@ -85,7 +85,7 @@ public class UserDetailsActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull @NotNull Task task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Të dhënat u ruajtën me sukses", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Data saved successfully", Toast.LENGTH_SHORT).show();
 
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);

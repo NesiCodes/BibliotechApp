@@ -75,7 +75,7 @@ public class EditDetailsAdapter extends FirebaseRecyclerAdapter<Model, EditDetai
                         .addOnSuccessListener(new OnSuccessListener() {
                             @Override
                             public void onSuccess(Object o) {
-                                Toast.makeText(view.getContext(), "Të dhënat u ruajtën me sukses",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(view.getContext(), "Data saved successfully",Toast.LENGTH_SHORT).show();
                             }
                         });
 
@@ -107,7 +107,7 @@ public class EditDetailsAdapter extends FirebaseRecyclerAdapter<Model, EditDetai
             bookLocation = (EditText) itemView.findViewById(R.id.BooksLocationTxt);
             bookAuthor = (EditText) itemView.findViewById(R.id.AuthorNameTxt);
             updateDetailsBtn = (Button) itemView.findViewById(R.id.UpdateDataBtn);
-            updateDetailsBtn.setText("Ruaj të dhënat");
+            updateDetailsBtn.setText("Save Data");
         }
     }
 

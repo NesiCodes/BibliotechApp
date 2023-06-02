@@ -44,10 +44,10 @@ public class DashBoardAdapter extends FirebaseRecyclerAdapter<Model, DashBoardAd
 
     @Override
     protected void onBindViewHolder(@NonNull DashBoardAdapter.Viewholder holder, int position, @NonNull Model model) {
-        holder.bookName.setText("Emri: " + model.getBookName());
-        holder.booksCount.setText("Totali: " + model.getBooksCount());
-        holder.bookLocation.setText("Vendndodhja: " + model.getBookLocation());
-        holder.bookAuthor.setText("Autori: " + model.getBookAuthor());
+        holder.bookName.setText("Name: " + model.getBookName());
+        holder.booksCount.setText("Amount: " + model.getBooksCount());
+        holder.bookLocation.setText("Location: " + model.getBookLocation());
+        holder.bookAuthor.setText("Author: " + model.getBookAuthor());
 
         Picasso.get().load(model.getImageUrl()).into(holder.imageView);
 
@@ -72,7 +72,7 @@ public class DashBoardAdapter extends FirebaseRecyclerAdapter<Model, DashBoardAd
                                                     @Override
                                                     public void onComplete(@NonNull @NotNull Task<Void> task) {
                                                         if (task.isSuccessful()) {
-                                                            Toast.makeText(view.getContext(), "Kërkesa për librin u anullua", Toast.LENGTH_SHORT).show();
+                                                            Toast.makeText(view.getContext(), "The request was canceleed", Toast.LENGTH_SHORT).show();
                                                         }
                                                     }
                                                 });
@@ -114,7 +114,7 @@ public class DashBoardAdapter extends FirebaseRecyclerAdapter<Model, DashBoardAd
             bookLocation = (TextView) itemView.findViewById(R.id.BooksLocationTxt);
             bookAuthor = (TextView) itemView.findViewById(R.id.bookAuthorEditTxt);
             collectBtn = (Button) itemView.findViewById(R.id.CollectBookBtn);
-            collectBtn.setText("Anullo Kërkesën");
+            collectBtn.setText("Cancel Request");
         }
     }
 

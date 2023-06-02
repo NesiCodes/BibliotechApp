@@ -151,7 +151,7 @@ public class UserProfileFragment extends Fragment {
                             FirebaseAuth.getInstance().sendPasswordResetEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
-                                    Toast.makeText(view.getContext(),"Linku u dergua me sukses", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(view.getContext(),"Link sent successfully", Toast.LENGTH_SHORT).show();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -175,7 +175,7 @@ public class UserProfileFragment extends Fragment {
                 String address = addressEditTxt.getText().toString();
 
                 if (phoneNumber.isEmpty() || cityName.isEmpty() || pinCode.isEmpty() || address.isEmpty()) {
-                    Toast.makeText(getContext(), "Plotësoni të gjitha fushat", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 } else {
                     updateDetails(phoneNumber, cityName, pinCode, address, uid);
                 }
@@ -298,7 +298,7 @@ public class UserProfileFragment extends Fragment {
                         Picasso.get().load(uri).into(circleImageView);
                     }
                 });
-                Toast.makeText(getContext(),"Fotoja u shtua me sukses", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Image added successfully", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -346,9 +346,9 @@ public class UserProfileFragment extends Fragment {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(getContext(), "Të dhënat u ruajtën me sukses", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Information saved successfully", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getContext(), "Ju lutem provoni përsëri", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Failed! Please try again", Toast.LENGTH_SHORT).show();
                 }
 
             }

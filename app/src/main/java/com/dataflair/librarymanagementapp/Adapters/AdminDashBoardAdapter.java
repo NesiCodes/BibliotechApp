@@ -85,15 +85,15 @@ public class AdminDashBoardAdapter extends FirebaseRecyclerAdapter<Model, AdminD
     @Override
     protected void onBindViewHolder(@NonNull AdminDashBoardAdapter.Viewholder holder, int position, @NonNull Model model) {
 
-        holder.bookName.setText("Emri: " + model.getBookName());
-        holder.booksCount.setText("Sasia: " + model.getBooksCount());
-        holder.bookLocation.setText("Vendndodhja: " + model.getBookLocation());
-        holder.bookAuthor.setText("Autori: " + model.getBookAuthor());
+        holder.bookName.setText("Name: " + model.getBookName());
+        holder.booksCount.setText("Amount: " + model.getBooksCount());
+        holder.bookLocation.setText("Location: " + model.getBookLocation());
+        holder.bookAuthor.setText("Author: " + model.getBookAuthor());
 
         holder.userNameTxt.setText(model.getName());
-        holder.userPhoneNumberTxt.setText("Numri: " + model.getPhoneNumber());
-        holder.userAddressTxt.setText("Adresa: " + model.getAddress());
-        holder.userCityTxt.setText("Qyteti: " + model.getCity());
+        holder.userPhoneNumberTxt.setText("PhoneNo: " + model.getPhoneNumber());
+        holder.userAddressTxt.setText("Address: " + model.getAddress());
+        holder.userCityTxt.setText("City: " + model.getCity());
         holder.userEmailTxt.setText(model.getMail());
 
         Picasso.get().load(model.getImageUrl()).into(holder.imageView);
@@ -133,7 +133,7 @@ public class AdminDashBoardAdapter extends FirebaseRecyclerAdapter<Model, AdminD
             @Override
             public void onClick(View view) {
                 phoneNumberForSms = model.getPhoneNumber();
-                messageForSms = "Kërkesa juaj për librin " + model.getBookName() + " u refuzua nga Admininstratori";
+                messageForSms = "Your request for book " + model.getBookName() + " was refused by the Administrator";
                 System.out.println("Admin Dashboard Print");
                 if(ContextCompat.checkSelfPermission(view.getContext(), Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
                     sendMessage();
@@ -175,11 +175,11 @@ public class AdminDashBoardAdapter extends FirebaseRecyclerAdapter<Model, AdminD
                                                                 public void onClick(View s) {
                                                                     String msgFromText = arsyeRefuzimiText.getText().toString();
                                                                     sPhone = model.getPhoneNumber();
-                                                                    sMessage = "Kërkesa juaj për librin " + model.getBookName() + " u refuzua nga Admininstratori";
+                                                                    sMessage = "Your request for book " + model.getBookName() + " was refused by the administrator";
                                                                     sPhone2 = sPhone;
                                                                     sMessage2 = sMessage;
                                                                     String data = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
-                                                                    String finalMessage = sMessage2.concat("\nArsyeja: " + msgFromText + "\nData: " + data);
+                                                                    String finalMessage = sMessage2.concat("\nReason: " + msgFromText + "\nData: " + data);
                                                                     sMessage2 = finalMessage;
 
                                                                     dialog.dismiss();
@@ -192,7 +192,7 @@ public class AdminDashBoardAdapter extends FirebaseRecyclerAdapter<Model, AdminD
                                                                                 @Override
                                                                                 public void onSuccess(Void unused) {
                                                                                     //Showing the Toast message to the user
-                                                                                    Toast.makeText(view.getContext(), "Kërkesa për librin u anullua me sukses", Toast.LENGTH_SHORT).show();
+                                                                                    Toast.makeText(view.getContext(), "The request for the book was successfully refused", Toast.LENGTH_SHORT).show();
                                                                                 }
                                                                             });
                                                                 }
@@ -236,7 +236,7 @@ public class AdminDashBoardAdapter extends FirebaseRecyclerAdapter<Model, AdminD
             @Override
             public void onClick(View view) {
                 phoneNumberForSms = model.getPhoneNumber();
-                messageForSms = "Kërkesa juaj për librin " + model.getBookName() + " u pranua nga Admininstratori dergesa do te behet me ane te postes ne adresen e dhene";
+                messageForSms = "Your request for book " + model.getBookName() + " was accepted by the Administrator";
                 System.out.println("Admin Dashboard Print");
                 if(ContextCompat.checkSelfPermission(view.getContext(), Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
                     sendMessage();
@@ -273,7 +273,7 @@ public class AdminDashBoardAdapter extends FirebaseRecyclerAdapter<Model, AdminD
                     @Override
                     public void onSuccess(Object o) {
                         phoneNumberForSms = model.getPhoneNumber();
-                        messageForSms = "Kërkesa juaj për librin " + model.getBookName() + " u pranua nga Admininstratori";
+                        messageForSms = "Your request for book " + model.getBookName() + " was accepted by the administrator";
                         if(ContextCompat.checkSelfPermission(view.getContext(), Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
                             sendMessage();
                         }else{
@@ -298,7 +298,7 @@ public class AdminDashBoardAdapter extends FirebaseRecyclerAdapter<Model, AdminD
                                             .child(key).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
-                                            Toast.makeText(view.getContext(), "Kërkesa për librin u pranua me sukses", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(view.getContext(), "The request was successfully accepted", Toast.LENGTH_SHORT).show();
                                         }
                                     });
                                 }
@@ -316,11 +316,11 @@ public class AdminDashBoardAdapter extends FirebaseRecyclerAdapter<Model, AdminD
 
                 FirebaseDatabase.getInstance().getReference().child("UserNotifications").child(model.getUserId())
                         .child(pushKey)
-                        .child("notification").setValue("Kërkesa juaj për librin " + model.getBookName() + " u pranua nga Administratori")
+                        .child("notification").setValue("Your request for book " + model.getBookName() + " was accepted by the administrator")
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(view.getContext(), "Libri u Pranua",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(view.getContext(), "Book accepted",Toast.LENGTH_SHORT).show();
                             }
                         });
 

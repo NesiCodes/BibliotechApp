@@ -45,10 +45,10 @@ public class AllBooksAdapter extends FirebaseRecyclerAdapter<Model, AllBooksAdap
     @Override
     protected void onBindViewHolder(@NonNull AllBooksAdapter.Viewholder holder, int position, @NonNull Model model) {
 
-        holder.bookName.setText("Emri: " + model.getBookName());
-        holder.booksCount.setText("Sasia: " + model.getBooksCount());
-        holder.bookLocation.setText("Vendndodhja: " + model.getBookLocation());
-        holder.bookAuthor.setText("Autori: " + model.getBookAuthor());
+        holder.bookName.setText("Name: " + model.getBookName());
+        holder.booksCount.setText("Amount: " + model.getBooksCount());
+        holder.bookLocation.setText("Location: " + model.getBookLocation());
+        holder.bookAuthor.setText("Author: " + model.getBookAuthor());
 
         Picasso.get().load(model.getImageUrl()).into(holder.imageView);
 
@@ -112,15 +112,15 @@ public class AllBooksAdapter extends FirebaseRecyclerAdapter<Model, AllBooksAdap
                                                                             .addOnSuccessListener(new OnSuccessListener() {
                                                                                 @Override
                                                                                 public void onSuccess(Object o) {
-                                                                                    Toast.makeText(view.getContext(), "Libri u kërkua me sukses",Toast.LENGTH_SHORT).show();
+                                                                                    Toast.makeText(view.getContext(), "Book successfully requested",Toast.LENGTH_SHORT).show();
                                                                                 }
                                                                             });
 
                                                                 }
                                                             });
-                                                    Toast.makeText(view.getContext(), "Libri u kërkua me sukses", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(view.getContext(), "The book was successfully requested", Toast.LENGTH_SHORT).show();
                                                 }else{
-                                                    Toast.makeText(view.getContext(), "Ju nuk mund të kërkoni më shumë se 1 libër", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(view.getContext(), "You cant request more than 1 book", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                             @Override
