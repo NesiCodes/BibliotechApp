@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_one"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Vendos Emrin"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"
+        />
+
+    <item
+        android:title="Menu Two"
+        android:id="@+id/menu_two"
+        app:showAsAction="always"
+        app:actionLayout="@layout/profile_menu_layout"/>
+
+    <item
+        android:title="Librat në sistem"
+        android:id="@+id/menu_librat"/>
+    <item
+        android:title="Menaxho kërkesat"
+        android:id="@+id/menu_user_kerkesat"/>
+    <item
+        android:title="Notifications"
+        android:id="@+id/menu_notifications"/>
+    <item
+        android:title="Profili"
+        android:id="@+id/menu_user_profili"/>
+</menu>

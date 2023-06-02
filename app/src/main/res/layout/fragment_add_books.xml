@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.AddBooksFragment">
+
+    <ImageView
+        android:id="@+id/BookImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="7dp"
+        android:background="@color/lightBlack"
+        android:src="@drawable/add_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Detajet e Librit"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/BookNameEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Emri i librit"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/lightBlack"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/TotalBooksEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Totali i Librave"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/lightBlack"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/BookLocationEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Vendndodhja në bibliotekë"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/lightBlack"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/bookAuthorEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Autori i librit"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/lightBlack"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/AddBookBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
+        android:text="Shto Librin"
+        android:textSize="18dp" />
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.UserDetailsActivity">
+
+
+    <TextView
+        android:id="@+id/payment_desc"
+        android:textColor="#097969"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Mirësevini në Bibliotech, plotësoni të gjitha fushat për të përfunduar regjistrimin tuaj"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:textSize="19sp" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/PhoneNumberEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:background="@drawable/input_background"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Numri i telefonit"-->
+<!--        android:minHeight="5dp"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingRight="10dp"-->
+<!--        android:paddingBottom="10dp"-->
+<!--        android:textColorHint="@color/common_google_signin_btn_text_light_disabled"-->
+<!--        android:textSize="16sp"/>-->
+
+    <EditText
+        android:id="@+id/AddressEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Adresa"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/common_google_signin_btn_text_light_disabled"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/CityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Qyteti"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/common_google_signin_btn_text_light_disabled"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/PinCodeExitText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="Pin Code"
+        android:minHeight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/common_google_signin_btn_text_light_disabled"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/UpdateProfileBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Ruaj të dhënat" />
+
+</LinearLayout>

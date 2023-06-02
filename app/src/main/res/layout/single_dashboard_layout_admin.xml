@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/BookImage"
+                android:layout_width="169dp"
+                android:layout_height="224dp"
+                android:src="@drawable/image_placeholder_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="24dp"
+                android:text="Detajet e Librit"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/BookNameTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Emri"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/BooksCountTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Sasia"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                android:singleLine="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/BooksLocationTxt" />
+
+            <TextView
+                android:id="@+id/BooksLocationTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_marginTop="8dp"
+                android:text="Vendndodhja"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/BookNameTxt" />
+
+            <TextView
+                android:id="@+id/bookAuthorEditTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_marginTop="4dp"
+                android:text="Autori"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.055"
+                app:layout_constraintStart_toEndOf="@+id/BookImage"
+                app:layout_constraintTop_toBottomOf="@+id/BooksCountTxt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="165dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Rreth Përdoruesit"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_admin_dashboard"
+            android:layout_width="101dp"
+            android:layout_height="92dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/profile_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/UserCityTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="12dp"
+            android:text="Qyteti"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image_admin_dashboard"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/UserAddressTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="4dp"
+            android:text="Adresa"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image_admin_dashboard"
+            app:layout_constraintTop_toBottomOf="@+id/UserCityTxt" />
+
+        <TextView
+            android:id="@+id/UserPhoneNumberTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="4dp"
+            android:text="Numri"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image_admin_dashboard"
+            app:layout_constraintTop_toBottomOf="@+id/UserAddressTxt" />
+
+        <TextView
+            android:id="@+id/UserEmailTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="4dp"
+            android:text="Email"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image_admin_dashboard"
+            app:layout_constraintTop_toBottomOf="@+id/UserPhoneNumberTxt" />
+
+        <TextView
+            android:id="@+id/UserNameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:text="Emri"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image_admin_dashboard" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/AcceptBookBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Prano" />
+
+
+        <Button
+            android:id="@+id/CancleBookBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Refuzo" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+
