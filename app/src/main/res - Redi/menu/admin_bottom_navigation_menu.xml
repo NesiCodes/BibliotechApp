@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/AddBookMenu"
+        android:icon="@drawable/home_icon"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/EditDetailsMenu"
+        android:icon="@drawable/edit_details_icon"
+        android:title="EditDetails" />
+
+    <item
+        android:id="@+id/DashBoardMenu"
+        android:icon="@drawable/dashboard_icon"
+        android:title="DashBoard" />
+
+    <item
+        android:id="@+id/ViewGivenBooks"
+        android:icon="@drawable/ic_baseline_pending_actions_24"
+        android:title="ActiveBooks" />
+
+    <item
+        android:id="@+id/AdminProfile"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile" />
+
+</menu>
