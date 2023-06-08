@@ -84,9 +84,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/payment_label"
                         android:layout_centerHorizontal="true"
-                        android:includeFontPadding="false"
-                        android:text="Libra në sistem"
                         android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:text="Books Registered"
                         android:textColor="@color/white"
                         android:textSize="17sp" />
 
@@ -133,9 +133,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/booking_label"
                         android:layout_centerHorizontal="true"
-                        android:includeFontPadding="false"
-                        android:text="Përdorues"
                         android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:text="Users"
                         android:textColor="@color/white"
                         android:textSize="17sp" />
 
@@ -191,9 +191,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/ordered_books"
                         android:layout_centerHorizontal="true"
-                        android:includeFontPadding="false"
-                        android:text="Libra të kërkuar"
                         android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:text="Requested Books"
                         android:textColor="@color/white"
                         android:textSize="17sp" />
 
@@ -240,10 +240,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/active_books"
                         android:layout_centerHorizontal="true"
-                        android:includeFontPadding="false"
-                        android:text="Libra aktiv"
-                        android:textColor="@color/white"
                         android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:text="Borrowed Books"
+                        android:textColor="@color/white"
                         android:textSize="17sp" />
 
 
@@ -264,7 +264,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
-                android:text="Shto përdorues" />
+                android:text="Add user" />
 
             <Button
                 android:id="@+id/SignOutBtn"

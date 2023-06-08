@@ -119,14 +119,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
-                android:text="Ruaj Ndryshimet" />
+                android:text="Save Changes" />
 
             <Button
                 android:id="@+id/changePassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
-                android:text="Ndrysho Password" />
+                android:text="Change Password" />
 
             <Button
                 android:id="@+id/logOutButton"
