@@ -1,6 +1,7 @@
 # Bibliotech Android
 **Information about the app can be found on: https://bibliotech.pythonanywhere.com**
 <br>
+**How to run the app on Android Studio**
 **#Step 1:**
 Download the project as a ZIP and extract it <br />
 ![image](https://user-images.githubusercontent.com/89842810/205718555-a0289875-fe4f-4add-8689-f6e5990ed089.png)
@@ -16,7 +17,7 @@ navigating to app>java>com.dataflair.librarymanagementapp>Start class, right cli
 ![image](https://user-images.githubusercontent.com/89842810/205722737-8e088e99-755c-4e26-bb81-0b408aacd866.png)
 <br />
 Administrator Login: email:unejsi.isufaj@gmail.com  pass:bibliotechadmlogin <br>
-User Login: email:sherifiygi@gmail.com  pass:12345678
+User Login: email:hhyperspace6@gmail.com  pass:12345678
 
 **If a problem occurrs while running the app make sure that u have installed the following:**
 <br />
