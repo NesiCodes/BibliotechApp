@@ -86,7 +86,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
-                        android:text="Books Registered"
+                        android:text="Books"
                         android:textColor="@color/white"
                         android:textSize="17sp" />
 
@@ -193,7 +193,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
-                        android:text="Requested Books"
+                        android:text="Requested"
                         android:textColor="@color/white"
                         android:textSize="17sp" />
 
