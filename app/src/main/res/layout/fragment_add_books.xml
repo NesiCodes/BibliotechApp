@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Detajet e Librit"
+        android:text="Book Info"
         android:textSize="23dp"
         android:textStyle="bold" />
 
@@ -36,7 +36,7 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/input_background"
         android:ems="10"
-        android:hint="Emri i librit"
+        android:hint="Book Name"
         android:minHeight="5dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
@@ -54,7 +54,7 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/input_background"
         android:ems="10"
-        android:hint="Totali i Librave"
+        android:hint="Total Books"
         android:minHeight="5dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
@@ -72,14 +72,14 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/input_background"
         android:ems="10"
-        android:hint="Vendndodhja në bibliotekë"
+        android:hint="Location"
         android:minHeight="5dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColorHint="@color/lightBlack"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/bookAuthorEditTxt"
@@ -90,14 +90,14 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/input_background"
         android:ems="10"
-        android:hint="Autori i librit"
+        android:hint="Author"
         android:minHeight="5dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColorHint="@color/lightBlack"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/AddBookBtn"
@@ -107,7 +107,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="60dp"
-        android:text="Shto Librin"
+        android:text="Add Book"
         android:textSize="18dp" />
 
 
